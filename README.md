@@ -1,39 +1,84 @@
-# expense-tracker
-The provided Python script is an Expense Tracker application with a graphical user interface (GUI) built using the Tkinter library, and it uses SQLite as the database to store and manage 
-expense records. 
-1) Imports:The script starts by importing necessary modules:
-datetime: Used for working with date and time.
-sqlite3: Used for connecting to and manipulating the SQLite database.
-tkcalendar.DateEntry: A custom Tkinter widget for date input.
-tkinter: The primary library for creating the GUI.
-tkinter.messagebox: Used for displaying message boxes.
-tkinter.ttk: Provides access to the themed Tkinter widgets.
+# 💰 Expense Tracker
 
-2) Database Connection: It connects to an SQLite database named "Expense Tracker.db" and creates a cursor for executing SQL commands.
-The script also creates an "ExpenseTracker" table if it doesn't exist already. This table is used to store expense records with columns for ID, Date, Payee, Description, Amount, and
-Mode of Payment.
+A simple **Expense Tracker** application built with **Python** using **Tkinter** for the GUI and **SQLite** for persistent data storage. It helps users record, view, edit, and manage daily expenses efficiently.
 
-3) Functions: The code defines several functions for various actions related to the Expense Tracker application, including adding, editing, deleting, and listing expenses.
-Functions like list_all_expenses, view_expense_details, clear_fields, remove_expense, remove_all_expenses, add_another_expense, edit_expense, and others handle different aspects of 
-managing expenses in the application.
+---
 
-4) GUI Creation: The GUI is created using Tkinter and consists of various frames, labels, buttons, and an interactive table (Treeview).
-The main window (root) is initialized with a title and fixed dimensions.
-Different frames (data_entry_frame, buttons_frame, tree_frame) are created to organize the layout of widgets.
-Widgets such as labels, entry fields, buttons, and dropdown menus are added to the frames.
-The Treeview widget (table) is used to display and manipulate expense records in a tabular format.
+## 🚀 Features
 
-5)bWidget Configuration: Widgets are configured with appropriate fonts, colors, and event handlers.
-For example, the DateEntry widget is used to input dates, and the OptionMenu widget is used for selecting the mode of payment.
+- Add, view, edit, and delete expenses
+- User-friendly graphical interface (Tkinter)
+- SQLite database for local storage
+- Calendar widget for easy date selection
+- Treeview table to display records
+- Sortable and scrollable table view
 
-6) Button Actions: Buttons placed in the GUI trigger various actions when clicked. For instance, the "Add expense" button calls the add_another_expense function to add a new expense
-   record to the database.
-   
-7) Database Operations: Functions like add_another_expense, edit_existing_expense, remove_expense, and remove_all_expenses interact with the SQLite database by executing SQL commands
-   to add, edit, or delete records.
-   
-8) Treeview (Table): The Treeview widget (table) is used to display expense records fetched from the database.
-It supports features like scrolling, column headings, and selection of rows.
-The list_all_expenses function populates this table with data from the database.
+---
 
-9) Main Loop: The script enters the main event loop (root.mainloop()) to start the GUI application. This loop listens for user interactions and responds accordingly.
+## 🛠️ Tech Stack
+
+- **Python**
+- **Tkinter** – GUI library
+- **SQLite** – Lightweight database
+- **tkcalendar.DateEntry** – Calendar widget for date inputs
+
+---
+
+## 📁 Project Structure
+
+- `Expense Tracker.db` – SQLite database file
+- `main.py` – Main Python script containing logic and UI
+
+---
+
+## 📦 How It Works
+
+### 1. **Imports**
+The script uses:
+- `datetime` – Handle dates and times
+- `sqlite3` – Database connection and queries
+- `tkinter` – GUI elements
+- `tkcalendar` – Calendar input for date selection
+
+### 2. **Database Initialization**
+- Connects to `Expense Tracker.db`
+- Creates a table `ExpenseTracker` with:
+  - `ID`
+  - `Date`
+  - `Payee`
+  - `Description`
+  - `Amount`
+  - `Mode of Payment`
+
+### 3. **Core Functions**
+- `add_another_expense()` – Add new expense
+- `edit_expense()` – Update selected expense
+- `remove_expense()` – Delete selected entry
+- `remove_all_expenses()` – Delete all records
+- `list_all_expenses()` – Populate table with data
+- `view_expense_details()` – Show selected row’s details
+- `clear_fields()` – Clear form inputs
+
+### 4. **GUI Components**
+- Structured using `Frames`:
+  - Entry section for new data
+  - Action buttons (Add, Edit, Delete, Clear)
+  - Treeview table to display expenses
+- Widgets include `Labels`, `Entry`, `DateEntry`, `OptionMenu`, `Treeview`, and `Buttons`
+
+### 5. **User Interaction**
+- Buttons trigger defined functions to interact with the database
+- Treeview displays records with scroll support and selection-based interaction
+
+### 6. **Main Event Loop**
+- The GUI runs inside `root.mainloop()` to handle events continuously
+
+---
+
+## 📸 Screenshot
+
+*Add a screenshot here if you'd like:*
+
+```bash
+📷 Screenshot goes here (e.g., ./screenshots/main_ui.png)
+
